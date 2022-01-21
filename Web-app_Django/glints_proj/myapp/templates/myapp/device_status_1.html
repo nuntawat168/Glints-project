@@ -1,0 +1,18 @@
+{% extends "myapp/base_form.html" %}
+{% block content %}
+  <b>DEVICE STATUS</b><br>
+  <p>
+  Light_01 : &nbsp;&nbsp;{{light_01_status}}&nbsp;&nbsp;Change status to:
+     &nbsp;&nbsp;<a href="{% url 'myapp:index' %}?light_01_status=ON"><b>ON</b></a>
+     &nbsp;&nbsp;<a href="{% url 'myapp:index' %}?light_01_status=OFF"><b>OFF</b></a></br>
+  Light_02 : &nbsp;&nbsp;{{light_02_status}}&nbsp;&nbsp;Change status to: 
+     &nbsp;&nbsp;<a href="{% url 'myapp:index' %}?light_02_status=ON"><b>ON</b></a>
+     &nbsp;&nbsp;<a href="{% url 'myapp:index' %}?light_02_status=OFF"><b>OFF</b></a></br>
+  Light_03 : &nbsp;&nbsp;{{light_03_status}}&nbsp;&nbsp;Change status to:
+     &nbsp;&nbsp;<a href="{% url 'myapp:index' %}?light_03_status=ON"><b>ON</b></a>
+     &nbsp;&nbsp;<a href="{% url 'myapp:index' %}?light_03_status=OFF"><b>OFF</b></a></br>
+  <br><br>
+  <b>GESTURE DETECT</b><br>
+  <p>Last detected : &nbsp;&nbsp;{{last_gesture}}<br><br>
+  <a href="{% url 'myapp:index' %}?dummy=none"><b>Refresh</b></a></br>
+{% endblock %}
